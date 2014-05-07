@@ -11,7 +11,7 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 - Uses CSS transforms & transitions.
 - Smooth performance on mobile devices.
 - jQuery animation fallback for IE 7 - 9.
-- Menu closes when a link is selected.
+- Menu closes when a link has <code>closePushy</code> class and it is pressed/clicked.
 - Menu closes when the site overlay is selected.
 - It's responsive!
 
@@ -43,7 +43,7 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 <!-- Your Content -->
 <div id="container">
     <!-- Menu Button -->
-    <div class="menu-btn">&#9776; Menu</div>
+    <div class="pushy-menu-btn">&#9776; Menu</div>
 </div>
 ```
 
@@ -106,6 +106,10 @@ html, body{
 | Safari (Mac)  | Internet Explorer Mobile (Windows Phone 8) |
 
 ##Version History
+
+0.9.2
+- Added support to close Pushy only when an element has a special class, otherwise not.
+- Now Pushy can be binded also to elements that are embedded through AJAX.
 
 0.9.1
 
