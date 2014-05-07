@@ -50,9 +50,9 @@ $(function() {
 		pushy.on('click', 'a', function() {
 			togglePushy();
 		});
-		
+
 		//close menu when clicking site overlay
-		siteOverlay.click(function(){ 
+		siteOverlay.click(function(){
 			togglePushy();
 		});
 	}else{
@@ -62,7 +62,7 @@ $(function() {
 
 		//keep track of menu state (open/close)
 		var state = true;
-		
+
 		var handler = function() {
 			if (state) {
 				openPushyFallback();
