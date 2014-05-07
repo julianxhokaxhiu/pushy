@@ -1,12 +1,16 @@
 {
   "name": "pushy",
   "version": "0.9.1",
-  "homepage": "https://github.com/christophery/pushy",
+  "homepage": "https://github.com/julianxhokaxhiu/pushy",
   "authors": [
-    "christophery <@cmyee>"
+    "christophery <@cmyee>",
+    "Julian Xhokaxhiu <@julianxhokaxhiu>"
   ],
   "description": "Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.",
-  "main": ["js/pushy.js", "css/pushy.css"],
+  "main": [
+    "js/pushy.js",
+    "css/pushy.css"
+  ],
   "keywords": [
     "jquery",
     "offcanvas",
