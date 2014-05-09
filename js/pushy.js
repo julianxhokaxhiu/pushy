@@ -52,7 +52,8 @@ $(function() {
 		});
 
 		//close menu when clicking site overlay
-		siteOverlay.click(function(){
+		siteOverlay.click(function(e){
+			e.preventDefault();
 			togglePushy();
 		});
 	}else{
