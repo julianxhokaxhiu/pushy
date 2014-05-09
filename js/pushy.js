@@ -1,4 +1,4 @@
-/*! Pushy - v0.9.2 - 2014-5-7
+/*! Pushy - v0.9.3
 * Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
 * https://github.com/christophery/pushy/
 * by Christopher Yee */
@@ -15,7 +15,8 @@ $(function() {
 		pushClass = "push-push", //css class to add pushy capability
 		menuBtn = $('.pushy-menu-btn'), //css classes to toggle the menu
 		menuSpeed = 200, //jQuery fallback menu speed
-		menuWidth = pushy.width() + "px"; //jQuery fallback menu width
+		menuWidth = pushy.width() + "px", //jQuery fallback menu width
+		onClickHandler; // OnClick Handler
 
 	function togglePushy(){
 		body.toggleClass(pushyActiveClass); //toggle site overlay
@@ -39,23 +40,10 @@ $(function() {
 	}
 
 	if(Modernizr.csstransforms3d){
-		//toggle menu
-		menuBtn.click(function() {
-			togglePushy();
-		});
-
-		// Watch .pushy for link events (use a deferred handler
-		// rather than immediate binding to handle dynamically
-		// created menu items).
-		pushy.on('click', 'a.closePushy', function() {
-			togglePushy();
-		});
-
-		//close menu when clicking site overlay
-		siteOverlay.click(function(e){
+		onClickHandler = function(e) {
 			e.preventDefault();
 			togglePushy();
-		});
+		}
 	}else{
 		//jQuery fallback
 		pushy.css({left: "-" + menuWidth}); //hide menu by default
@@ -64,7 +52,8 @@ $(function() {
 		//keep track of menu state (open/close)
 		var state = true;
 
-		var handler = function() {
+		onClickHandler = function(e) {
+			e.preventDefault();
 			if (state) {
 				openPushyFallback();
 				state = false;
@@ -73,16 +62,13 @@ $(function() {
 				state = true;
 			}
 		};
-
-		//toggle menu
-		menuBtn.click(handler);
-
-		// Watch .pushy for link events (use a deferred handler
-		// rather than immediate binding to handle dynamically
-		// created menu items).
-		pushy.on('click', 'a.closePushy', handler);
-
-		//close menu when clicking site overlay
-		siteOverlay.click(handler);
 	}
+
+	pushy.on('click', 'a.closePushy', onClickHandler);
+
+	//toggle menu
+	menuBtn.click(onClickHandler);
+
+	//close menu when clicking site overlay
+	siteOverlay.click(onClickHandler);
 });

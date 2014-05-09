@@ -107,9 +107,13 @@ html, body{
 
 ##Version History
 
+0.9.3
+- Refactored a little the code to make it more clean and manageable
+- Prevent the click behavior for the Menu button
+
 0.9.2
 - Added support to close Pushy only when an element has a special class, otherwise not.
-- Now Pushy can be binded also to elements that are embedded through AJAX.
+- Now the close Pushy event can be binded also to elements that are embedded through AJAX, inside the menu.
 
 0.9.1
 
