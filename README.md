@@ -1,4 +1,4 @@
-#Pushy
+#Pushy-Reloaded
 
 Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
 
