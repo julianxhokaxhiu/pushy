@@ -30,7 +30,7 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 
 ```html
 <!-- Pushy Menu -->
-<nav class="pushy pushy-left">
+<nav class="pushy pushy-left pushy-static">
     <ul>
         <li><a href="#">Item 1</a></li>
         <li><a href="#">Item 2</a></li>
@@ -108,7 +108,7 @@ html, body{
 ##Version History
 
 0.9.4
-- Fix the flicketing on first page load (aka please show the menu only when needed)
+- Fix the flickering on first page load (aka please show the menu only when needed). Add <code>pushy-static</code> as the latest class to the pushy nav.
 
 0.9.3
 - Refactored a little the code to make it more clean and manageable
