@@ -67,10 +67,10 @@ $(function() {
 	pushy.on('click', 'a.closePushy', onClickHandler);
 
 	//toggle menu
-	menuBtn.click(onClickHandler);
+	menuBtn.on('click', onClickHandler);
 
 	//close menu when clicking site overlay
-	siteOverlay.click(onClickHandler);
+	siteOverlay.on('click', onClickHandler);
 
 	$(function(e){
 		pushy.removeClass('pushy-static');
