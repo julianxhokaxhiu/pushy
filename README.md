@@ -107,6 +107,9 @@ html, body{
 
 ##Version History
 
+0.9.4
+- Fix the flicketing on first page load (aka please show the menu only when needed)
+
 0.9.3
 - Refactored a little the code to make it more clean and manageable
 - Prevent the click behavior for the Menu button
