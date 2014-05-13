@@ -27,7 +27,7 @@ $(function() {
 
 	function openPushyFallback(){
 		body.addClass(pushyActiveClass);
-		pushy.animate({left: "0px"}, menuSpeed);
+		pushy.animate({left: 0}, menuSpeed);
 		container.animate({left: menuWidth}, menuSpeed);
 		push.animate({left: menuWidth}, menuSpeed); //css class to add pushy capability
 	}
@@ -35,14 +35,13 @@ $(function() {
 	function closePushyFallback(){
 		body.removeClass(pushyActiveClass);
 		pushy.animate({left: "-" + menuWidth}, menuSpeed);
-		container.animate({left: "0px"}, menuSpeed);
-		push.animate({left: "0px"}, menuSpeed); //css class to add pushy capability
+		container.animate({left: 0}, menuSpeed);
+		push.animate({left: 0}, menuSpeed); //css class to add pushy capability
 	}
 
 	if(Modernizr.csstransforms3d){
 		onClickHandler = function(e) {
 			e.preventDefault();
-			pushy.removeAttr('style');
 			togglePushy();
 		}
 	}else{
@@ -55,7 +54,6 @@ $(function() {
 
 		onClickHandler = function(e) {
 			e.preventDefault();
-			pushy.removeAttr('style');
 			if (state) {
 				openPushyFallback();
 				state = false;
@@ -74,9 +72,7 @@ $(function() {
 	//close menu when clicking site overlay
 	siteOverlay.click(onClickHandler);
 
-	$(function(){
-		pushy.css({
-			'visibility' : 'hidden'
-		})
-	});
+	$(function(e){
+		pushy.removeClass('pushy-static');
+	})
 });
