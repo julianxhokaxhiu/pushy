@@ -13,14 +13,14 @@ ul{
 
 /* Container */
 
-#container{
+.pushy-container{
 	position: relative;
 	padding: 20px 40px;
 }
 
 /* Menu Button */
 
-.menu-btn{
+.pushy-menu-btn{
 	width: 100px;
 	padding: 10px;
 	margin-bottom: 30px;
@@ -30,7 +30,7 @@ ul{
 	cursor: pointer;
 }
 
-.menu-btn:hover{
+.pushy-menu-btn:hover{
 	background: #00b4ff;
 	color: #FFF;
 }
