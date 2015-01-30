@@ -2,15 +2,14 @@
 
 Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
 
-Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one of your websites.
+Feel free to [let me know](http://www.twitter.com/julianxhokaxhiu) if you use Pushy in one of your websites.
 
-[View Demo](http://www.christopheryee.ca/pushy) | [WordPress Theme](https://github.com/christophery/pushypress)
+[View Demo](http://julianxhokaxhiu.github.io/pushy-reloaded/)
 
 ##Features
 
 - Uses CSS transforms & transitions.
 - Smooth performance on mobile devices.
-- jQuery animation fallback for IE 7 - 9.
 - Menu closes when a link has <code>closePushy</code> class and it is pressed/clicked.
 - Menu closes when the site overlay is selected.
 - It's responsive!
@@ -18,7 +17,6 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 ##Requirements
 
 - jQuery 1.9+
-- Modernizr (testing for CSS 3D Transforms)
 
 ##Usage
 
@@ -30,7 +28,7 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 
 ```html
 <!-- Pushy Menu -->
-<nav class="pushy pushy-left pushy-static">
+<nav class="pushy pushy-static">
     <ul>
         <li><a href="#">Item 1</a></li>
         <li><a href="#">Item 2</a></li>
@@ -38,36 +36,18 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 </nav>
 
 <!-- Site Overlay -->
-<div class="site-overlay"></div>
+<div class="pushy-site-overlay"></div>
 
 <!-- Your Content -->
-<div id="container">
+<div class="pushy-container">
     <!-- Menu Button -->
     <div class="pushy-menu-btn">&#9776; Menu</div>
 </div>
 ```
 
-##Modernizr
-
-Pushy uses Modernizr to detect & test for ```CSS 3D Transforms``` support in the browser. Be sure to include this test in you are using the [Modernizr build tool](http://modernizr.com/download/#-csstransforms3d-shiv-cssclasses-teststyles-testprop-testallprops-prefixes-domprefixes-load).
-
-
 ##Tips
 
-- Use the ```.push``` CSS class on HTML elements outside of the ```#container```.
-
-```html
-<header class="push">
-    <h1>This is a Heading</h1>
-    <h2>This is a subheading</h2>
-</header>
-
-<!-- Your Content -->
-<div id="container"></div>
-```
-
 - Add the following to hide horizontal scroll bars when menu is open, disable the webkit tap highlight and fix the focus scrolling in Safari.
-
 
 ```css
 html, body{
@@ -77,7 +57,7 @@ html, body{
 }
 ```
 
-- If you change the width of the ```.pushy``` menu, be sure to update the values in the ```.pushy-left```and ```.container-push, .push-push``` CSS classes.
+- If you change the width of the ```.pushy``` menu, be sure to update the values in the other CSS selectors too
 
 ```css
 
@@ -85,14 +65,16 @@ html, body{
     width: 400px; /* Changed the width to 400px */
 }
 
-.pushy-left{
-    transform: translate3d(-400px,0,0); /* Updated the values */
-    /* Don't forget the vendor prefixes */
-}
+.pushy-active {
+    .pushy {
+        transform: translate3d(-400px,0,0); /* Updated the values */
+        /* Don't forget the vendor prefixes */
+    }
 
-.container-push, .push-push{
-    transform: translate3d(400px,0,0); /* Updated the values */
-    /* Don't forget the vendor prefixes */
+    .pushy-container {
+        transform: translate3d(400px,0,0); /* Updated the values */
+        /* Don't forget the vendor prefixes */
+    }
 }
 ```
 
@@ -100,15 +82,21 @@ html, body{
 
 | Desktop       | Mobile                                     |
 | ------------- | -------------------------------------------|
-| IE 7-11       | Chrome                                     |
+| IE 9-11       | Chrome                                     |
 | Chrome        | Android Browser (Android 4.x)              |
 | Firefox       | Safari (iOS 6-8)                           |
 | Safari (Mac)  | Internet Explorer (Windows Phone 8.x)      |
 
 ##Version History
 
+0.9.5
+- Remove old IE support
+- Rewritten the whole animation logic. Now the class `.pushy-active` will rule the animation in-out of the menu
+- Removed some toggle classes from direct elements
+- Moved some IDs to classes and renamed other to make them start always with `pushy-*`
+
 0.9.4
-- Fix the flickering on first page load (aka please show the menu only when needed). Add <code>pushy-static</code> as the latest class to the pushy nav.
+- Fix the flickering on first page load (aka please show the menu only when needed). Add `pushy-static` as the latest class to the pushy nav.
 
 0.9.3
 - Refactored a little the code to make it more clean and manageable
@@ -146,6 +134,3 @@ html, body{
 
 - [HTML5 Boilerplate](http://html5boilerplate.com/)
 - [jQuery](http://jquery.com/)
-- [Modernizr](http://modernizr.com/)
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/christophery/pushy/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
