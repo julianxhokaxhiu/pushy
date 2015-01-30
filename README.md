@@ -100,10 +100,10 @@ html, body{
 
 | Desktop       | Mobile                                     |
 | ------------- | -------------------------------------------|
-| IE 7-10       | Chrome (Android 4.2.2)                     |
-| Chrome        | Android Browser (Android 4.2.2)            |
-| Firefox       | Safari (iOS 6-7)                           |
-| Safari (Mac)  | Internet Explorer Mobile (Windows Phone 8) |
+| IE 7-11       | Chrome                                     |
+| Chrome        | Android Browser (Android 4.x)              |
+| Firefox       | Safari (iOS 6-8)                           |
+| Safari (Mac)  | Internet Explorer (Windows Phone 8.x)      |
 
 ##Version History
 
