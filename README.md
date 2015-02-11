@@ -16,32 +16,31 @@ Feel free to [let me know](http://www.twitter.com/julianxhokaxhiu) if you use Pu
 
 ##Requirements
 
-- jQuery 1.9+
+- jQuery 2.x
 
 ##Usage
 
-1. Include jQuery & Modernizr.
+1. Include jQuery
 
-2. Add the stylesheet (pushy.css) in your head and the JS (pushy.min.js) file in your footer.
+2. Add the stylesheet (`pushy.css` or `pushy.min.css`) in your head and the JS (`pushy.js` or `pushy.min.js`) file in your footer.
 
 3. Insert the following markup into your body.
 
 ```html
 <!-- Pushy Menu -->
-<nav class="pushy pushy-static">
+<div class="pushy pushy-static">
     <ul>
         <li><a href="#">Item 1</a></li>
         <li><a href="#">Item 2</a></li>
     </ul>
-</nav>
-
-<!-- Site Overlay -->
-<div class="pushy-site-overlay"></div>
+</div>
 
 <!-- Your Content -->
 <div class="pushy-container">
     <!-- Menu Button -->
     <div class="pushy-menu-btn">&#9776; Menu</div>
+    <!-- Site Overlay -->
+    <div class="pushy-site-overlay"></div>
 </div>
 ```
 
@@ -57,26 +56,7 @@ html, body{
 }
 ```
 
-- If you change the width of the ```.pushy``` menu, be sure to update the values in the other CSS selectors too
-
-```css
-
-.pushy{
-    width: 400px; /* Changed the width to 400px */
-}
-
-.pushy-active {
-    .pushy {
-        transform: translate3d(-400px,0,0); /* Updated the values */
-        /* Don't forget the vendor prefixes */
-    }
-
-    .pushy-container {
-        transform: translate3d(400px,0,0); /* Updated the values */
-        /* Don't forget the vendor prefixes */
-    }
-}
-```
+- If you change the width of the ```.pushy``` menu, be sure to update the value `$pushyWidth` in the [SCSS file](scss/pushy.scss).
 
 ##Browser Compatibility
 
@@ -88,6 +68,12 @@ html, body{
 | Safari (Mac)  | Internet Explorer (Windows Phone 8.x)      |
 
 ##Version History
+
+0.9.6
+- Add Multi level capability!
+- New SCSS files.
+- Grunt + Bower built system
+- Open and Compressed CSS and JS files
 
 0.9.5
 - Remove old IE support
