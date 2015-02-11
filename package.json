@@ -1,0 +1,14 @@
+{
+  "name": "pushy-reloaded",
+  "description": "Pushy Reloaded",
+  "version": "0.0.1",
+  "dependencies": {
+    "grunt": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-closurecompiler": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-yui-compressor": "*",
+    "load-grunt-tasks": "*"
+  }
+}
