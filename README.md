@@ -68,55 +68,6 @@ html, body{
 | Firefox       | Safari (iOS 6-8)                           |
 | Safari (Mac)  | Internet Explorer (Windows Phone 8.x)      |
 
-##Version History
-
-0.9.6
-- Add Multi level capability!
-- New SCSS files.
-- Grunt + Bower built system
-- Open and Compressed CSS and JS files
-
-0.9.5
-- Remove old IE support
-- Rewritten the whole animation logic. Now the class `.pushy-active` will rule the animation in-out of the menu
-- Removed some toggle classes from direct elements
-- Moved some IDs to classes and renamed other to make them start always with `pushy-*`
-
-0.9.4
-- Fix the flickering on first page load (aka please show the menu only when needed). Add `pushy-static` as the latest class to the pushy nav.
-
-0.9.3
-- Refactored a little the code to make it more clean and manageable
-- Prevent the click behavior for the Menu button
-
-0.9.2
-- Added support to close Pushy only when an element has a special class, otherwise not.
-- Now the close Pushy event can be binded also to elements that are embedded through AJAX, inside the menu.
-
-0.9.1
-
-- Added support for more menu items (with scroll bar).
-- Added the .push CSS class. This adds pushy support to additional HTML elements outside of the container div.
-- Fixed menu transition.
-- Tested in iOS 7.
-- Updated the demo file.
-
-0.9.0
-
-- Added a site overlay when Pushy is toggled
-- Fixed horizonal scroll bar issue on mobile devices
-- Disabled webkit tap highlight
-- Rejiggered the JS file
-- Updated to jQuery 1.10.1
-- Updated the demo file
-
-0.8.4
-
-- Fixed performance issue with mobile devices
-- Updated to jQuery 1.10
-- Updated the demo file
-- Updated the read me
-
 ##Thanks to
 
 - [HTML5 Boilerplate](http://html5boilerplate.com/)
