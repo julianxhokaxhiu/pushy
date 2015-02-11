@@ -11,11 +11,15 @@ ul{
     padding: 0;
 }
 
+ul li > a .fa {
+	float: right;
+}
+
 /* Container */
 
 .pushy-container{
 	position: relative;
-	padding: 20px 40px;
+	height: 100%;
 }
 
 /* Menu Button */
@@ -33,4 +37,9 @@ ul{
 .pushy-menu-btn:hover{
 	background: #00b4ff;
 	color: #FFF;
+}
+
+/* Content */
+#content {
+	padding: 20px 40px;
 }

@@ -6,7 +6,7 @@
         <title>Pushy - Off-Canvas Navigation Menu</title>
         <meta name="description" content="Pushy is an off-canvas navigation menu for your website.">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/demo.css">
         <!-- Pushy CSS -->
@@ -14,31 +14,42 @@
     </head>
     <body>
         <!-- Pushy Menu -->
-        <nav class="pushy pushy-static">
-            <ul>
-                <li><a href="#">Item 1</a></li>
+        <div class="pushy pushy-static">
+            <ul class="pushy-main-submenu">
+                <li>
+                  <a href="#">Item 1<i class="fa fa-chevron-right"></i></a>
+                  <ul class="pushy-submenu">
+                    <li><a href="#">Item 7</a></li>
+                    <li><a href="#">Item 8</a></li>
+                    <li><a href="#">Item 9</a></li>
+                    <li><a href="#">Item 10</a></li>
+                    <li><a href="#">Item 11</a></li>
+                  </ul>
+                  <div class="pushy-close-submenu"></div>
+                </li>
                 <li><a href="#">Item 2</a></li>
                 <li><a href="#">Item 3</a></li>
                 <li><a href="#">Item 4</a></li>
                 <li><a href="#">Item 5</a></li>
                 <li><a href="#">Item 6</a></li>
             </ul>
-        </nav>
-
-        <!-- Site Overlay -->
-        <div class="pushy-site-overlay"></div>
+        </div>
 
         <!-- Your Content -->
         <div class="pushy-container">
-            <!-- Menu Button -->
-            <div class="pushy-menu-btn">&#9776; Menu</div>
+            <div id="content">
+                <!-- Menu Button -->
+                <div class="pushy-menu-btn">&#9776; Menu</div>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pharetra neque a diam cursus pulvinar. Suspendisse faucibus mi id accumsan lobortis. Pellentesque consectetur varius turpis, nec viverra justo pellentesque sit amet. Vestibulum convallis leo non purus vehicula, non faucibus libero rhoncus. Morbi aliquam tincidunt facilisis. Aenean sodales nulla ac semper consectetur. Vivamus commodo massa convallis justo posuere vestibulum. Aenean congue non mauris ac auctor. Ut suscipit et eros nec suscipit. Nulla congue, mauris nec bibendum sagittis, urna orci tincidunt massa, in vulputate velit nulla vitae nunc. Etiam urna justo, imperdiet nec orci sollicitudin, tempus feugiat erat. Vivamus id lectus nulla. Vestibulum sagittis cursus metus vel ultricies. Suspendisse viverra interdum metus eu placerat. Quisque tristique velit nisi, scelerisque consectetur tortor vehicula ut. Donec id fermentum mi, nec venenatis felis.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pharetra neque a diam cursus pulvinar. Suspendisse faucibus mi id accumsan lobortis. Pellentesque consectetur varius turpis, nec viverra justo pellentesque sit amet. Vestibulum convallis leo non purus vehicula, non faucibus libero rhoncus. Morbi aliquam tincidunt facilisis. Aenean sodales nulla ac semper consectetur. Vivamus commodo massa convallis justo posuere vestibulum. Aenean congue non mauris ac auctor. Ut suscipit et eros nec suscipit. Nulla congue, mauris nec bibendum sagittis, urna orci tincidunt massa, in vulputate velit nulla vitae nunc. Etiam urna justo, imperdiet nec orci sollicitudin, tempus feugiat erat. Vivamus id lectus nulla. Vestibulum sagittis cursus metus vel ultricies. Suspendisse viverra interdum metus eu placerat. Quisque tristique velit nisi, scelerisque consectetur tortor vehicula ut. Donec id fermentum mi, nec venenatis felis.</p>
 
-            <p>Praesent id metus imperdiet, congue leo sed, eleifend purus. Donec congue scelerisque tempus. Maecenas eget nunc pharetra, laoreet enim sed, dictum odio. Sed non mollis purus. Aliquam aliquet, risus eget dictum commodo, neque mi dapibus ipsum, tempus iaculis elit lorem pharetra mauris. Vivamus pulvinar scelerisque lectus a congue. Sed vitae odio massa. Pellentesque condimentum sit amet arcu in convallis.</p>
+                <p>Praesent id metus imperdiet, congue leo sed, eleifend purus. Donec congue scelerisque tempus. Maecenas eget nunc pharetra, laoreet enim sed, dictum odio. Sed non mollis purus. Aliquam aliquet, risus eget dictum commodo, neque mi dapibus ipsum, tempus iaculis elit lorem pharetra mauris. Vivamus pulvinar scelerisque lectus a congue. Sed vitae odio massa. Pellentesque condimentum sit amet arcu in convallis.</p>
 
-            <p>Etiam dapibus nisl nibh, et commodo nisi euismod vehicula. In consectetur eleifend felis, eget iaculis lectus scelerisque vel. Mauris non nibh nec sem consequat dapibus sed at tellus. Nunc egestas ac diam sed pretium. Praesent ultrices malesuada nisi at ornare. Aliquam arcu eros, pellentesque vitae fringilla ac, rhoncus id urna. Curabitur sit amet tortor eu neque sollicitudin congue. Proin mattis, diam quis ullamcorper iaculis, metus lectus vulputate tellus, id imperdiet nibh ante vel risus. Nam ut mi libero. Suspendisse auctor neque at pulvinar vestibulum. Suspendisse potenti. Cras molestie eros at feugiat gravida.</p>
-
+                <p>Etiam dapibus nisl nibh, et commodo nisi euismod vehicula. In consectetur eleifend felis, eget iaculis lectus scelerisque vel. Mauris non nibh nec sem consequat dapibus sed at tellus. Nunc egestas ac diam sed pretium. Praesent ultrices malesuada nisi at ornare. Aliquam arcu eros, pellentesque vitae fringilla ac, rhoncus id urna. Curabitur sit amet tortor eu neque sollicitudin congue. Proin mattis, diam quis ullamcorper iaculis, metus lectus vulputate tellus, id imperdiet nibh ante vel risus. Nam ut mi libero. Suspendisse auctor neque at pulvinar vestibulum. Suspendisse potenti. Cras molestie eros at feugiat gravida.</p>
+            </div>
+            
+            <!-- Site Overlay -->
+            <div class="pushy-site-overlay"></div>
         </div>
 
         <!-- jQuery -->
