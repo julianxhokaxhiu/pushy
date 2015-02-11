@@ -33,15 +33,15 @@
           openClass = 'pushy-open',
           isOpen = parent.hasClass( openClass );
 
-      if ( $this.next().is('ul.pushy-submenu') ) {
+      if ( $this.nextAll('.pushy-submenu').length ) {
         e.stopPropagation();
         e.preventDefault();
-      }
 
-      parent
-      .toggleClass( openClass, !isOpen )
-      .siblings()
-      .removeClass( openClass );
+        parent
+        .toggleClass( openClass, !isOpen )
+        .siblings()
+        .removeClass( openClass );
+      }
     })
 
 		//toggle menu
