@@ -6,19 +6,43 @@
 (function($) {
 	$(function(){
 		var $body = $('body'),
-			$pushy = $('.pushy'), //menu css class
-			$container = $('.pushy-container'), //container css class
-			$siteOverlay = $('.pushy-site-overlay'), //site overlay
-			$menuBtn = $('.pushy-menu-btn'), //css classes to toggle the menu
-			pushyActiveClass = 'pushy-active', //css class to toggle site overlay
-			onClickHandler = function (e) {
-				e.preventDefault();
-				$body.toggleClass(pushyActiveClass); //toggle site overlay
-			}
+  			$pushy = $('.pushy'), //menu css class
+  			$container = $('.pushy-container'), //container css class
+  			$siteOverlay = $('.pushy-site-overlay'), //site overlay
+  			$menuBtn = $('.pushy-menu-btn'), //css classes to toggle the menu
+  			pushyActiveClass = 'pushy-active', //css class to toggle site overlay
+  			onClickHandler = function (e) {
+  				e.preventDefault();
+  				$body.toggleClass(pushyActiveClass); //toggle site overlay
+  			}
 
 		// Close pushy if a specified item has 'closePushy' class
 		$pushy
-		.on('click', 'a.closePushy', onClickHandler);
+    .removeClass('pushy-static')
+		.on('click', 'a.closePushy', onClickHandler)
+    .on('click', '.pushy-close-submenu', function (e) {
+      var $this = $(this);
+
+      $this
+      .closest('.pushy-open')
+      .removeClass('pushy-open');
+    })
+    .on('click', 'li > a', function (e) {
+      var $this = $(this),
+          parent = $this.parent(),
+          openClass = 'pushy-open',
+          isOpen = parent.hasClass( openClass );
+
+      if ( $this.next().is('ul.pushy-submenu') ) {
+        e.stopPropagation();
+        e.preventDefault();
+      }
+
+      parent
+      .toggleClass( openClass, !isOpen )
+      .siblings()
+      .removeClass( openClass );
+    })
 
 		//toggle menu
 		$menuBtn
@@ -27,8 +51,5 @@
 		//close menu when clicking site overlay
 		$siteOverlay
 		.on('click', onClickHandler);
-
-		$pushy
-		.removeClass('pushy-static');
 	});
 })(jQuery);
