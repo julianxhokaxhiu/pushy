@@ -13,6 +13,7 @@ Feel free to [let me know](http://www.twitter.com/julianxhokaxhiu) if you use Pu
 - Menu closes when a link has <code>closePushy</code> class and it is pressed/clicked.
 - Menu closes when the site overlay is selected.
 - It's responsive!
+- Multi level navigation!
 
 ##Requirements
 
