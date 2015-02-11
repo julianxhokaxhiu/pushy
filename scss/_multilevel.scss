@@ -1,0 +1,58 @@
+.pushy {
+    > .pushy-main-submenu {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        li {
+            &.pushy-open {
+                > .pushy-submenu {
+                    left: 0;
+                }
+                > .pushy-close-submenu {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 10%;
+                    cursor: pointer;
+
+                    @media ( min-width: $screen-sm-min ) {
+                      width: 5%;
+                    }
+                }
+            }
+        }
+        // Display + animation
+        .pushy-submenu {
+            // Style
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            bottom: 0;
+            left: -100%;
+            width: 90%;
+            margin: 0;
+            box-shadow: 10px 0px 30px -10px rgba( #000, 0.7 );
+            background: $pushyBgColor;
+
+            // Transitions
+            transition: left 0.25s ease-in-out;
+
+            .pushy-submenu {
+                background: lighter( $pushyBgColor, 5% );
+
+                // ... define here multiple levels if you need them
+            }
+            @media ( min-width: $screen-sm-min ) {
+              width: 95%;
+            }
+        }
+        .pushy-close-level {
+            display: none;
+        }
+    }
+}
