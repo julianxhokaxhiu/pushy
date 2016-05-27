@@ -1,0 +1,69 @@
+// Vars
+$pushyWidth: 270px;
+$pushyWidthSm: 400px;
+$pushyBgColor: #333332;
+
+// Menu Appearance
+.pushy {
+  position: fixed;
+  width: $pushyWidth;
+  height: 100%;
+  top: 0;
+  z-index: 9999;
+  background: $pushyBgColor;
+  font-weight: bold;
+  box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, 0.7);
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: translate3d(-$pushyWidth, 0, 0);
+
+  li {
+    /* enables momentum scrolling in iOS overflow elements */
+    > a {
+      display: block;
+      color: #b3b3b1;
+      padding: 15px 30px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-decoration: none;
+      &:hover {
+        background: #00b4ff;
+        color: #FFF;
+      }
+    }
+  }
+}
+
+// Menu Transitions
+.pushy,
+.pushy-container {
+  transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+  /* improves performance issues on mobile*/
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+}
+.pushy-static {
+  transition: transform 0;
+}
+
+// Site Overlay
+.pushy-site-overlay {
+  display: none;
+}
+
+// Active state for Pushy
+.pushy-active {
+  .pushy {
+    transform: translate3d(0, 0, 0);
+  }
+  .pushy-site-overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: rgba( #000, 0.7 );
+  }
+}

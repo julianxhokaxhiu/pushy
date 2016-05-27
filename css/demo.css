@@ -7,8 +7,9 @@ html, body{
 /* Lists */
 
 ul{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 ul li > a .fa {
@@ -24,10 +25,30 @@ ul li > a .fa {
 
 /* Menu Button */
 
+.pushy-btn-direction {
+	position: relative;
+	height: 50px;
+	text-align: right;
+}
+
+.pushy-btn-direction > div {
+	position: absolute;
+	left: 0;
+	right: 100%;
+	text-align: right;
+	transition: all 1s;
+}
+
+.pushy-btn-direction.to-right > div {
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
 .pushy-menu-btn{
+	display: inline-block;
 	width: 100px;
 	padding: 10px;
-	margin-bottom: 30px;
 	background: #000;
 	color: #FFF;
 	text-align: center;

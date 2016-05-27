@@ -1,0 +1,40 @@
+.pushy {
+  > .pushy-main-submenu {
+    li {
+      &.pushy-open {
+        > .pushy-submenu {
+          left: 0;
+        }
+        > .pushy-close-submenu {
+          right: 0;
+        }
+      }
+    }
+    // Display + animation
+    .pushy-submenu {
+      left: -100%;
+      box-shadow: 10px 0px 30px -10px rgba( #000, 0.7 );
+      // Transitions
+      transition: left 0.25s ease-in-out;
+    }
+  }
+}
+
+// Active state for Pushy
+.pushy-active {
+  .pushy-container {
+    transform: translate3d($pushyWidth, 0, 0);
+  }
+}
+
+@media ( min-width: $screen-sm-min ) {
+  .pushy {
+    width: $pushyWidthSm;
+    transform: translate3d(-$pushyWidthSm, 0, 0);
+  }
+  .pushy-active {
+    .pushy-container {
+      transform: translate3d($pushyWidthSm, 0, 0);
+    }
+  }
+}

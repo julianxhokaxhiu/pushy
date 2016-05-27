@@ -33,11 +33,10 @@ module.exports = function(grunt) {
         force: true
       },
       css: [
-        'css/pushy.css',
-        'css/pushy.min.css'
+        'css/pushy*',
       ],
       js: [
-        'js/pushy.min.js'
+        'js/pushy.min*'
       ]
     },
 		sass: {
@@ -48,6 +47,7 @@ module.exports = function(grunt) {
 			build: {
 				files: {
 					'css/pushy.css' : [ 'scss/pushy.scss' ],
+          'css/pushy-right.css' : [ 'scss/pushy-right.scss' ],
 				}
 			}
 		},
@@ -74,7 +74,8 @@ module.exports = function(grunt) {
     cssmin: {
       build: {
         files: {
-          'css/pushy.min.css' : [ 'css/pushy.css' ]
+          'css/pushy.min.css' : [ 'css/pushy.css' ],
+          'css/pushy-right.min.css' : [ 'css/pushy-right.css' ],
         }
       }
     },

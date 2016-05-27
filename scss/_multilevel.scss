@@ -8,15 +8,11 @@
 
         li {
             &.pushy-open {
-                > .pushy-submenu {
-                    left: 0;
-                }
                 > .pushy-close-submenu {
                     display: block;
                     position: absolute;
                     top: 0;
                     bottom: 0;
-                    right: 0;
                     width: 10%;
                     cursor: pointer;
 
@@ -33,14 +29,9 @@
             z-index: 2;
             top: 0;
             bottom: 0;
-            left: -100%;
             width: 90%;
             margin: 0;
-            box-shadow: 10px 0px 30px -10px rgba( #000, 0.7 );
             background: $pushyBgColor;
-
-            // Transitions
-            transition: left 0.25s ease-in-out;
 
             .pushy-submenu {
                 background: lighter( $pushyBgColor, 5% );
