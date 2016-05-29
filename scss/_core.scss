@@ -15,7 +15,6 @@ $pushyBgColor: #333332;
   box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, 0.7);
   overflow-y: auto;
   overflow-x: hidden;
-  transform: translate3d(-$pushyWidth, 0, 0);
 
   li {
     /* enables momentum scrolling in iOS overflow elements */

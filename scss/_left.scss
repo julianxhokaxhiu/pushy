@@ -1,4 +1,6 @@
 .pushy {
+  transform: translate3d(-$pushyWidth, 0, 0);
+
   > .pushy-main-submenu {
     li {
       &.pushy-open {
