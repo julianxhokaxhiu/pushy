@@ -41,8 +41,8 @@ module.exports = function(grunt) {
     },
 		sass: {
       options: {
-          sourcemap: 'none',
-          loadPath: '.'
+        sourcemap: 'none',
+        loadPath: '.'
       },
 			build: {
 				files: {
