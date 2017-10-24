@@ -29,7 +29,7 @@
   }
 }
 
-@media ( min-width: $screen-sm-min ) {
+@include media-breakpoint-up(md) {
   .pushy {
     width: $pushyWidthSm;
     transform: translate3d(-$pushyWidthSm, 0, 0);
