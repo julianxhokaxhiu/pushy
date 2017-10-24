@@ -17,7 +17,7 @@ Feel free to [let me know](http://www.twitter.com/julianxhokaxhiu) if you use Pu
 
 ##Requirements
 
-- jQuery 2.x
+- jQuery 2.x/3.x
 
 ##Usage
 
