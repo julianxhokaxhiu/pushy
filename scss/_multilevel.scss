@@ -16,7 +16,7 @@
                     width: 10%;
                     cursor: pointer;
 
-                    @media ( min-width: $screen-sm-min ) {
+                    @include media-breakpoint-up(md) {
                       width: 5%;
                     }
                 }
@@ -38,7 +38,7 @@
 
                 // ... define here multiple levels if you need them
             }
-            @media ( min-width: $screen-sm-min ) {
+            @include media-breakpoint-up(md) {
               width: 95%;
             }
         }
