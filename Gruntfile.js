@@ -92,6 +92,14 @@ module.exports = function(grunt) {
           "max_processes": 5,
         }
       }
+    },
+    connect: {
+      build: {
+        options: {
+          port: 8000,
+          hostname: '*'
+        }
+      }
     }
   });
 
@@ -101,5 +109,14 @@ module.exports = function(grunt) {
     'cssmin',
     'autoprefixer',
     'closurecompiler'
+  ]);
+
+  grunt.registerTask('serve', [
+    'clean',
+    'sass',
+    'cssmin',
+    'autoprefixer',
+    'closurecompiler',
+    'connect'
   ]);
 };
