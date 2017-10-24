@@ -17,11 +17,12 @@
     "url": "git+https://github.com/julianxhokaxhiu/pushy-reloaded.git"
   },
   "devDependencies": {
+    "bootstrap": "4.0.0-beta.2",
     "grunt": "*",
     "grunt-autoprefixer": "*",
     "grunt-closurecompiler": "*",
     "grunt-contrib-clean": "*",
-    "grunt-contrib-sass": "*",
+    "grunt-sass": "*",
     "grunt-contrib-connect": "*",
     "grunt-yui-compressor": "*",
     "load-grunt-tasks": "*"
