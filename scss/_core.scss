@@ -37,9 +37,6 @@ $pushyBgColor: #333332 !default;
 .pushy,
 .pushy-container {
   transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
-  /* improves performance issues on mobile*/
-  -webkit-backface-visibility: hidden;
-  -webkit-perspective: 1000;
 }
 .pushy-static {
   transition: transform 0;
